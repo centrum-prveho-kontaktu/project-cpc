@@ -157,10 +157,7 @@
     .burgerIconContainer {
         visibility: hidden;
     }
-}
 
-/* Mobile styles */
-@media (min-width: 768px) {
     .socials {
         display: flex;
     }
