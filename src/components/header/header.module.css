@@ -18,10 +18,9 @@
     padding: 0.25dvh 2em;
 }
 
-.logo svg {
-    width: 8em;
+.logo img {
+    width: 7em;
     height: fit-content;
-    fill: #f4f4f4;
 }
 
 .links {

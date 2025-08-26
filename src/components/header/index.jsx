@@ -1,5 +1,4 @@
 import styles from './header.module.css';
-import {ReactComponent as Logo} from '../../assets/logo-white.svg';
 import NavBar from "./nav-bar";
 import SidebarButton from "./sidebar-button";
 import LanguageSwitcher from "./language-switcher";
@@ -11,7 +10,7 @@ export default function Header({sidebarToggle, setSidebarToggle}) {
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
             <div className={styles.logo}>
-                <Logo/>
+                <img src={"/img/logo-cpc.png"} alt={""}/>
             </div>
             <NavBar/>
             <div className={styles.buttonsRight}>
