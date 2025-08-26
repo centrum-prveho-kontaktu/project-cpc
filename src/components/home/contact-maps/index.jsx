@@ -12,7 +12,7 @@ function ContactBlock({
                           mapQuery,          // адреса для карти (query)
                           reverseOnDesktop,  // для другого офісу міняємо порядок (карта зліва)
                       }) {
-    const {t} = useTranslation("home");
+    const {t} = useTranslation(["home", "common"]);
 
     return (
         <section
@@ -86,11 +86,11 @@ export default function ContactMaps() {
 
     // Повні назви днів словацькою
     const hoursCommon = [
-        {day: "monday", time: "8:00 – 15:00 h."},
-        {day: "tuesday", time: "8:00 – 15:00 h."},
-        {day: "wednesday", time: "8:00 – 16:00 h."},
-        {day: "thursday", time: "8:00 – 15:00 h."},
-        {day: "friday", time: "8:00 – 14:00 h."},
+        {day: "monday", time: `8:00 – 15:00 ${t("common:hoursShort")}`},
+        {day: "tuesday", time: `8:00 – 15:00 ${t("common:hoursShort")}`},
+        {day: "wednesday", time: `8:00 – 16:00 ${t("common:hoursShort")}`},
+        {day: "thursday", time: `8:00 – 15:00 ${t("common:hoursShort")}`},
+        {day: "friday", time: `8:00 – 14:00 ${t("common:hoursShort")}`},
     ];
 
     return (

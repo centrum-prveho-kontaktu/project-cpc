@@ -23,6 +23,7 @@ i18n.use(initReactI18next)
             lng: "ua",
             fallbackLng: "en",
             ns: Object.keys(resources.en),
+            defaultNS: "common",
 
             interpolation: {
                 escapeValue: false,
