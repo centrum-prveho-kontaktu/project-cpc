@@ -3,6 +3,7 @@ import NavBar from "./nav-bar";
 import SidebarButton from "./sidebar-button";
 import LanguageSwitcher from "./language-switcher";
 import useScrolledFromTop from "../../hooks/useScrolledFromTop";
+import Socials from "./socials";
 
 export default function Header({sidebarToggle, setSidebarToggle}) {
     const {scrolled} = useScrolledFromTop(50);
@@ -15,6 +16,7 @@ export default function Header({sidebarToggle, setSidebarToggle}) {
             <NavBar/>
             <div className={styles.buttonsRight}>
                 <LanguageSwitcher/>
+                <Socials/>
                 <SidebarButton sidebarToggle={sidebarToggle}
                                setSidebarToggle={setSidebarToggle}
                 />

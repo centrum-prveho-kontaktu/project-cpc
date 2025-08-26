@@ -1,8 +1,10 @@
 import styles from "./about-us-brief.module.css";
 import {useTranslation} from "react-i18next";
+import {useAppNavigation} from "../../../hooks/use-app-navigation";
 
 export default function AboutUsBrief() {
     const {t} = useTranslation(["home"]);
+    const appNavigate = useAppNavigation();
 
     return (
         <article className={styles.container}>
@@ -12,17 +14,12 @@ export default function AboutUsBrief() {
             />
             <h2>
                 {t("aboutUsBrief.title")}
-                {/*Centrum podpory cudzincov*/}
             </h2>
             <p>
                 {t("aboutUsBrief.text")}
-                {/*Ciel’om Magistrátu mesta Košice je túto podporu systematicky rozvíjať. Aj preto v jeho štruktúrach
-                pôsobí Centrum podpory cudzincov, ktoré poskytuje svoje služby prostredníctvom kancelárie prvého
-                kontaktu (KPK) pre cudzincov.*/}
             </p>
-            <button>
+            <button onClick={() => appNavigate("#contacts")}>
                 {t("aboutUsBrief.contactsButton")}
-                {/*Kontakty*/}
             </button>
         </article>
     );

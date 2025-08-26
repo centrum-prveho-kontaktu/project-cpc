@@ -46,25 +46,31 @@
     display: flex;
     align-items: center;
     gap: 1em;
-    margin-top: 0.5em;
 }
 
 .buttonsRight svg {
     width: 1.5em;
     height: 1.5em;
     cursor: pointer;
+    fill: #f4f4f4;
+}
+
+.buttonsRight svg:hover {
+    fill: #c5c5c5;
 }
 
 .socials {
-
+    display: flex;
+    gap: 1em;
 }
 
 .socialsBtn {
-
+    height: 1.5em;
 }
 
 .burgerIconContainer {
     visibility: visible;
+    height: 1.5em;
 }
 
 .burgerIconContainer svg:hover {
@@ -73,6 +79,7 @@
 
 .languageSwitcher {
     position: relative;
+    height: 1.5em;
 }
 
 .languageSwitcher svg {
