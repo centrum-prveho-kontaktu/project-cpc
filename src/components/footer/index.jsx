@@ -1,10 +1,13 @@
-import { FaFacebookF, FaTelegramPlane, FaViber } from "react-icons/fa";
+import { FaFacebookF, FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
 import styles from "./footer.module.css";
-import {useTranslation} from "react-i18next";
+import {useLocation} from "react-router-dom";
+import WorkHours from "./work-hours";
+import SecondOfficeBlock from "./second-office-block";
+import FirstOfficeBlock from "./first-office-block";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-  const {t} = useTranslation(["footer", "common"]);
+    const year = new Date().getFullYear();
+    const location = useLocation();
 
   return (
     <footer className={styles.container}>
@@ -37,14 +40,14 @@ export default function Footer() {
               </a>
             </p>
             <div className={styles.icons}>
-              <a className={styles.iconBtn} href="https://www.facebook.com/CentrumPodporyCudzincovKosice" aria-label="Facebook">
+              <a className={styles.iconBtn} href="#" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a className={styles.iconBtn} href="https://t.me/+421908365995" aria-label="Telegram">
+              <a className={styles.iconBtn} href="#" aria-label="Telegram">
                 <FaTelegramPlane />
               </a>
-              <a className={styles.iconBtn} href="tel:+421908365995" aria-label="Viber">
-                <FaViber />
+              <a className={styles.iconBtn} href="tel:+421908365995" aria-label="Phone">
+                <FaPhoneAlt />
               </a>
             </div>
           </div>
@@ -65,30 +68,21 @@ export default function Footer() {
 
         <hr className={styles.divider} />
 
-        {/* нижній блок */}
-        <div className={styles.bottomGrid}>
-          <div className={styles.block}>
-            <h3 className={styles.title}>{t("rightSide.name")}{/*KANCELÁRIA PRVÉHO KONTAKTU PRE CUDZINCOV*/}</h3>
-            <address className={styles.address}>
-              Tr. SNP 48/A, Košice
-              <br />
-              040 10, Staré Mesto
-            </address>
-            <p className={styles.line}>
-              {t("phone")}{/*Phone*/}:{" "}
-              <a href="tel:+421556419190" className={styles.link}>
-                +421 55 64 19 190
-              </a>
-            </p>
-          </div>
-        </div>
+                {/* нижній блок */}
+                {location.pathname !== "/" && (
+                    <>
+                        <hr className={styles.divider}/>
+                        <SecondOfficeBlock/>
+                    </>
+                )}
 
-        {/* копірайт */}
-        <div className={styles.copyRow}>
-          <span>Text © {year} Košice</span>
-        </div>
+                {/* копірайт */}
+                <div className={styles.copyRow}>
+                    <span>Text © {year} Košice</span>
+                </div>
 
-      </div>
-    </footer>
-  );
+            </div>
+        </footer>
+    )
+        ;
 }
