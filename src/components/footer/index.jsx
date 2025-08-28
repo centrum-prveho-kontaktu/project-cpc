@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTelegramPlane, FaPhoneAlt } from "react-icons/fa";
+import { FaFacebookF, FaTelegramPlane, FaViber } from "react-icons/fa";
 import styles from "./footer.module.css";
 import {useTranslation} from "react-i18next";
 
@@ -37,14 +37,14 @@ export default function Footer() {
               </a>
             </p>
             <div className={styles.icons}>
-              <a className={styles.iconBtn} href="#" aria-label="Facebook">
+              <a className={styles.iconBtn} href="https://www.facebook.com/CentrumPodporyCudzincovKosice" aria-label="Facebook">
                 <FaFacebookF />
               </a>
-              <a className={styles.iconBtn} href="#" aria-label="Telegram">
+              <a className={styles.iconBtn} href="https://t.me/+421908365995" aria-label="Telegram">
                 <FaTelegramPlane />
               </a>
-              <a className={styles.iconBtn} href="tel:+421908365995" aria-label="Phone">
-                <FaPhoneAlt />
+              <a className={styles.iconBtn} href="tel:+421908365995" aria-label="Viber">
+                <FaViber />
               </a>
             </div>
           </div>
