@@ -6,6 +6,7 @@ export default function AboutKosice() {
 
     return (
         <article>
+            <div />
 
             <div className={styles.bgLayer}>
                 <div className={styles.overlay}/>
