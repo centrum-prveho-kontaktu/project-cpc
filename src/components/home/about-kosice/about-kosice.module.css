@@ -30,8 +30,9 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
 
-    /* ⚠️ Ключові властивості для iOS: */
     z-index: -1;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
 }
 
 
