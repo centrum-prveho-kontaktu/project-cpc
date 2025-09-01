@@ -14,7 +14,7 @@ export default function AboutKosice() {
             bgElement.style.backgroundAttachment = "unset";
         }
 
-    }, [navigator.userAgent]);
+    }, []);
 
     return (
         <article>
